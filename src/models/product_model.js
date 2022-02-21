@@ -1,22 +1,27 @@
+//product, img, price, cant, state
 const mongoose = require('mongoose')
 //creando el modelo, se debe crear el model y el router
-const user_schema = mongoose.Schema({
-    name: {
+const model_schema = mongoose.Schema({
+    product: {
         type: String,
         require: true
     },
-    lastname: {
+    img: {
         type: String,
         require: true
     },
-    age: {
+    price: {
         type: Number,
         require: true
     },
-    email: {
-        type: String,
+    cant: {
+        type: Number,
+        require: true
+    },
+    state: {
+        type: Boolean,
         require: true
     }
 })
 //exportamos el modelo
-module.exports = mongoose.model('user_document', user_schema)
+module.exports = mongoose.model('product_document', model_schema)
