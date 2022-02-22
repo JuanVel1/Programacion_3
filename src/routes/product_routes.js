@@ -1,5 +1,5 @@
 //product, img, price, cant, state
-const { Router } = require('express')
+//const { Router } = require('express')
 const express = require('express')
 const { set } = require('mongoose')
 const productSchema = require('../models/product_model')

@@ -29,20 +29,32 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3000/api/user HTTP/1.1
+GET http://localhost:3000/api/product/62149d0ced5fbe76a67158fb HTTP/1.1
 
 ###
 
-GET http://localhost:3000/api/user/6213bdec2c39cba47f442101 HTTP/1.1
+###
+
+GET http://localhost:3000/api/product/62148ee2e738153a79791c99 HTTP/1.1
+
+###
+GET http://localhost:3000/api/client/6213c6be495593aac0a9441c HTTP/1.1
+
+###
 
 //Reemplazar id por id especifica
-DELETE http://localhost:3000/api/user/id HTTP/1.1
+DELETE http://localhost:3000/api/product/62148ee2e738153a79791c99 HTTP/1.1
+
+###
 
 //Reemplazar id por id especifica
-PUT http://localhost:3000/api/user/id HTTP/1.1
+PUT http://localhost:3000/api/product/62149d0ced5fbe76a67158fb HTTP/1.1
 Content-Type: application/json
 
 {
-    "name":"Esteban",
-    "lastname":"Giraldo"
+    "product":"sanduchera",
+    "img":"https://images.pexels.com/photos/8078531/pexels-photo-8078531.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "price":220000,
+    "cant":2,
+    "state":true
 }
