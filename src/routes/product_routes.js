@@ -1,5 +1,4 @@
 //product, img, price, cant, state
-//const { Router } = require('express')
 const express = require('express')
 const { set } = require('mongoose')
 const productSchema = require('../models/product_model')
@@ -23,7 +22,7 @@ route.get('/product', (req, res) => {
 })
 
 //Mostrar info de producto especifico
-route.get('./product/:id', (req, res) => {
+route.get('/product/:id', (req, res) => {
     const id = req.params
     productSchema
         .findById(id)
@@ -32,7 +31,7 @@ route.get('./product/:id', (req, res) => {
 })
 
 //Eliminar un producto especifico
-route.delete('./product/:id', (req, res) => {
+route.delete('/product/:id', (req, res) => {
     const { id } = req.params
     productSchema
         .remove({ _id: id })
@@ -41,7 +40,7 @@ route.delete('./product/:id', (req, res) => {
 })
 
 //Editar un producto especifico
-route.put('./product/:id', (req, res) => {
+route.put('/product/:id', (req, res) => {
     const { id } = req.params
     const { product, img, price, cant, state } = req.body
     productSchema

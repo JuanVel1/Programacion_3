@@ -22,7 +22,7 @@ route.get('/client',(req, res)=>{
 })
 
 //Mostrar info de usuario especifico
-route.get('./client/:id',(req, res)=>{
+route.get('/client/:id',(req, res)=>{
     const id = req.params
     clientSchema
         .findById(id)
@@ -31,7 +31,7 @@ route.get('./client/:id',(req, res)=>{
 })
 
 //Eliminar un usuario especifico
-route.delete('./client/:id',(req, res)=>{
+route.delete('/client/:id',(req, res)=>{
     const {id} = req.params
     clientSchema
         .remove({_id:id})
@@ -40,7 +40,7 @@ route.delete('./client/:id',(req, res)=>{
 })
 
 //Editar un usuario especifico
-route.put('./client/:id',(req, res)=>{
+route.put('/client/:id',(req, res)=>{
     const {id} = req.params
     const {name, lastname,age, email,address} = req.body
     clientSchema
