@@ -46,7 +46,7 @@ GET http://localhost:3000/api/client HTTP/1.1
 
 
 ###
-PUT http://localhost:3000/api/product/62149d0ced5fbe76a67158fb HTTP/1.1
+PUT http://localhost:3000/api/product/6214f9e7ebda390473775964 HTTP/1.1
 Content-Type: application/json
 
 {
@@ -56,4 +56,22 @@ Content-Type: application/json
     "cant":2,
     "state":true
 }
+###
+
+###
+PUT http://localhost:3000/api/client/6214fa5bebda390473775967 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Client XD",
+  "lastname": "lastname XD",
+  "age": 66,
+  "email": "XD@ucaldas.edu.co",
+  "address": {
+    "city": "Pereira",
+    "lat": -75.488777,
+    "len": 5.086858
+    }
+}
+
 ###
